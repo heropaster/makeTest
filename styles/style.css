@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Graphik Medium";
+  src: url("../fonts/GraphikLCG-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Graphik", sans-serif;
+  color: #1b1b1b;
+}
+
+.container {
+  margin: 0 auto;
+  display: grid;
+}
+
+.header {
+  margin-top: 32px;
+}
+.header .user {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.header .user .name {
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.header .user .name__surname {
+  font-family: "Graphik Medium";
+}
+.header .user .name__middlename {
+  color: #7d7d7d;
+}
+.header .menu {
+  margin-top: 8px;
+  height: 10px;
+  grid-column: 12/12;
+  position: relative;
+}
+.header .menu__line {
+  display: block;
+  position: absolute;
+  background: #7d7d7d;
+  height: 3px;
+}
+.header .menu__line.first-line {
+  width: 32px;
+  top: 0;
+}
+.header .menu__line.second-line {
+  width: 24px;
+  left: 8px;
+  top: 9px;
+}
+
+.footer {
+  justify-content: center;
+  justify-items: center;
+}
+.footer span {
+  grid-column: span 12;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1312px;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
+}/*# sourceMappingURL=style.css.map */

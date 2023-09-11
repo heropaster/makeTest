@@ -1,0 +1,77 @@
+@import 'vars';
+@font-face {
+   font-family: 'Graphik Medium';
+   src: url('../fonts/GraphikLCG-Medium.woff2') format('woff2');
+   font-weight: 500;
+   font-style: normal;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font-family: 'Graphik', sans-serif;
+   color: $mainColor;
+}
+.container {
+   margin: 0 auto;
+   display: grid;
+}
+.header {
+   margin-top: 32px;
+   .user {
+      grid-column: span 2;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      .name {
+         font-size: 14px;
+         line-height: 20px;
+         display: flex;
+         flex-direction: column;
+         &__surname {
+            font-family: $medium;
+         }
+         &__middlename {
+            color: $grayColor;
+         }
+      }
+   }
+   .menu {
+      margin-top: 8px;
+      height: 10px;
+      grid-column: 12/12;
+      position: relative;
+      &__line {
+         display: block;
+         position: absolute;
+         background: $grayColor;
+         height: 3px;
+         &.first-line {
+            width: 32px;
+            top: 0;
+         }
+         &.second-line {
+            width: 24px;
+            left: 8px;
+            top: 9px;
+         }
+      }
+   }
+}
+.footer {
+   justify-content: center;
+   justify-items: center;
+   span {
+      grid-column: span 12;
+   }
+}
+
+@media (min-width: 1200px) {
+   .container {
+      max-width: 1312px;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 32px;
+   }
+}
