@@ -185,6 +185,60 @@ body {
   grid-column: span 12;
   padding: 45px 0;
 }
+.main .typography__content {
+  grid-column: span 12;
+  grid-template-columns: repeat(12, minmax(60px, min(80px, 8.33vw)));
+}
+.main .typography__tabs {
+  display: flex;
+  gap: 32px;
+  grid-column: span 12;
+  list-style-type: none;
+  margin-top: 8px;
+  position: relative;
+}
+.main .typography__tabs::before {
+  content: "";
+  position: absolute;
+  top: 39px;
+  width: 100%;
+  height: 1px;
+  background: #cbcbcc;
+}
+.main .typography__tabs .tab {
+  cursor: pointer;
+  transition: color 0.3s;
+  display: inline-block;
+  color: #7d7d7d;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Graphik Medium";
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+.main .typography__tabs .tab:hover {
+  color: #1b1b1b;
+}
+.main .typography__tabs .tab:hover::before {
+  background: #3e29e3;
+}
+.main .typography__tabs .tab::before {
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  transition: background 0.3s;
+}
+.main .typography__tabs .tab.active-tab {
+  color: #1b1b1b;
+}
+.main .typography__tabs .tab.active-tab::before {
+  background: #3e29e3;
+}
 
 .footer {
   justify-content: center;
