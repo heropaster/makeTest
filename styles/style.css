@@ -106,6 +106,12 @@ body {
 .main {
   grid-column: 4/12;
   margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(60px, min(80px, 8.33vw)));
+}
+.main__heading {
+  grid-column: span 6;
+  margin-bottom: 64px;
 }
 .main__heading .level {
   font-size: 24px;
@@ -115,6 +121,69 @@ body {
   font-size: 48px;
   line-height: 56px;
   margin-bottom: 16px;
+}
+.main__content {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(60px, min(80px, 8.33vw)));
+}
+.main__content .section__text {
+  line-height: 24px;
+  font-size: 16px;
+  margin-bottom: 48px;
+  grid-column: span 8;
+}
+.main__content .subtitle {
+  grid-column: span 12;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 24px;
+}
+.main__content .preface {
+  grid-column: span 8;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 40px;
+}
+.main .section {
+  margin-top: 40px;
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(60px, min(80px, 8.33vw)));
+}
+.main .section .grid__division {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(60px, min(80px, 8.33vw)));
+}
+.main .section .grid__division .grid__subtitle {
+  grid-column: span 12;
+  font-family: "Graphik Medium";
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 32px;
+}
+.main .section .grid__division .table {
+  grid-column: span 10;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.main .section .grid__division .table__item {
+  display: inline-block;
+  color: #7d7d7d;
+  font-size: 14px;
+  line-height: 20px;
+}
+.main .section .grid__division .table__item__value {
+  margin-top: 8px;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1b1b1b;
+}
+.main .section .grid__division .grid__image {
+  grid-column: span 12;
+  padding: 45px 0;
 }
 
 .footer {
