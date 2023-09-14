@@ -18,6 +18,9 @@ body {
    font-family: 'Graphik', sans-serif;
    color: $mainColor;
 }
+img {
+   width: 100%;
+}
 .container {
    margin: 0 auto;
    display: grid;
@@ -36,6 +39,7 @@ body {
          flex-direction: column;
          &__surname {
             font-family: $medium;
+            font-weight: 500;
          }
          &__middlename {
             color: $grayColor;
@@ -140,6 +144,7 @@ body {
    }
    .section {
       margin-top: 40px;
+      margin-bottom: 40px;
       grid-column: span 12;
       display: grid;
       grid-template-columns: $grid;
@@ -150,8 +155,10 @@ body {
          .grid__subtitle {
             grid-column: span 12;
             font-family: $medium;
+            font-weight: 500;
             font-size: 24px;
             line-height: 32px;
+            margin-top: 64px;
             margin-bottom: 32px;
          }
          .table {
@@ -174,13 +181,14 @@ body {
          }
          .grid__image {
             grid-column: span 12;
-            padding: 45px 0;
+            padding: 45px 0 0 0;
          }
       }
    }
    .typography {
       &__content {
          grid-column: span 12;
+         display: grid;
          grid-template-columns: $grid;
       }
       &__tabs {
@@ -206,6 +214,7 @@ body {
             font-size: 16px;
             line-height: 24px;
             font-family: $medium;
+            font-weight: 500;
             position: relative;
             width: max-content;
             &:hover {
@@ -228,6 +237,298 @@ body {
                color: $mainColor;
                &::before {
                   background: $blue;
+               }
+            }
+         }
+      }
+      .typography__tab {
+         margin-top: 64px;
+         grid-column: span 12;
+         display: grid;
+         grid-template-columns: $grid;
+         row-gap: 48px;
+         .text-style {
+            grid-column: span 12;
+            display: grid;
+            grid-template-columns: $grid;
+            row-gap: 48px;
+            .text-desc {
+               grid-column: 1/5;
+               color: $grayColor;
+               font-size: 14px;
+               line-height: 20px;
+            }
+            .text-example {
+               grid-column: 6/12;
+               color: $mainColor;
+            }
+         }
+         &.desktop-tab {
+            .text-example {
+               &.h1 {
+                  font-size: 48px;
+                  line-height: 56px;
+                  font-weight: 700;
+               }
+               &.h2 {
+                  font-size: 32px;
+                  line-height: 40px;
+                  font-weight: 700;
+               }
+               &.h3 {
+                  font-size: 24px;
+                  line-height: 32px;
+                  font-family: $medium;
+                  font-weight: 500;
+               }
+               &.h4 {
+                  font-size: 18px;
+                  line-height: 28px;
+                  font-family: $medium;
+                  font-weight: 500;
+               }
+               &.p-lead {
+                  font-size: 24px;
+                  line-height: 32px;
+               }
+               &.p-large {
+                  font-size: 18px;
+                  line-height: 28px;
+               }
+               &.p-primary {
+                  font-size: 16px;
+                  line-height: 24px;
+               }
+               &.p-additionally {
+                  font-size: 14px;
+                  line-height: 20px;
+               }
+            }
+         }
+         &.mobile-tab {
+            display: none;
+            .text-example {
+               &.h1 {
+                  font-size: 32px;
+                  line-height: 40px;
+                  font-weight: 700;
+               }
+               &.h2 {
+                  font-size: 28px;
+                  line-height: 36px;
+                  font-weight: 700;
+               }
+               &.h3 {
+                  font-size: 20px;
+                  line-height: 28px;
+                  font-family: $medium;
+                  font-weight: 500;
+               }
+               &.h4 {
+                  font-size: 18px;
+                  line-height: 28px;
+                  font-family: $medium;
+                  font-weight: 500;
+               }
+               &.p-lead {
+                  font-size: 20px;
+                  line-height: 28px;
+               }
+               &.p-large {
+                  font-size: 18px;
+                  line-height: 28px;
+               }
+               &.p-primary {
+                  font-size: 16px;
+                  line-height: 24px;
+               }
+               &.p-additionally {
+                  font-size: 14px;
+                  line-height: 20px;
+               }
+            }
+         }
+      }
+   }
+   .ui {
+      &__division {
+         &:not(:nth-child(1)) {
+            margin-top: 40px;
+         }
+         grid-column: span 12;
+         display: grid;
+         grid-template-columns: $grid;
+         .ui__subtitle {
+            grid-column: span 12;
+            font-family: $medium;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 32px;
+            margin-top: 24px;
+            margin-bottom: 36px;
+         }
+         &__description {
+            grid-column: span 12;
+         }
+         .ui__inputs {
+            margin-top: 56px;
+            grid-column: span 12;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 32px;
+            row-gap: 108px;
+            .ui__input-container {
+               position: relative;
+               height: 50px;
+               &.hovered {
+                  .ui__input {
+                     border-color: $blue;
+                  }
+                  &::after {
+                     content: '';
+                     display: block;
+                     width: 16px;
+                     height: 16px;
+                     background: url('../images/icons/cursor.svg');
+                     position: absolute;
+                     left: 55px;
+                     bottom: 25px;
+                  }
+               }
+               &.focused {
+                  .ui__input {
+                     border-bottom: 4px solid $blue;
+                  }
+                  .custom-placeholder {
+                     font-size: 12px;
+                     color: $grayColor;
+                     transform: translateY(-100%);
+                  }
+               }
+
+               .ui__narrative {
+                  position: absolute;
+                  top: -40px;
+                  color: $grayColor;
+                  font-size: 14px;
+                  line-height: 20px;
+               }
+               .ui__input {
+                  width: 100%;
+                  border: none;
+                  outline: none;
+                  font-size: 16px;
+                  line-height: 24px;
+                  color: $mainColor;
+                  border-bottom: 2px solid #aeadae;
+                  padding-bottom: 6px;
+                  cursor: pointer;
+                  transition: 0.3s ease;
+                  &:disabled {
+                     background: transparent;
+                  }
+                  &:hover {
+                     border-color: $blue;
+                  }
+                  &:focus {
+                     border-bottom: 4px solid $blue;
+                  }
+                  &.error {
+                     border-bottom: 4px solid $error;
+                     & + .custom-placeholder {
+                        color: $error;
+                     }
+                  }
+               }
+               .custom-placeholder {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  transform: translateY(0%);
+                  color: $mainColor;
+                  transition: transform 0.3s, font-size 0.3s, color 0.3s;
+               }
+               &.error {
+                  .ui__input {
+                     border-bottom: 4px solid $error;
+                  }
+                  .custom-placeholder {
+                     font-size: 12px;
+                     color: $error;
+                     transform: translateY(-100%);
+                  }
+                  .error-message {
+                     display: block;
+                  }
+               }
+               .error-message {
+                  display: none;
+                  color: $error;
+                  font-size: 14px;
+                  line-height: 20px;
+                  position: absolute;
+                  left: 0;
+                  bottom: -6px;
+               }
+            }
+            .ui__input:focus + .custom-placeholder,
+            .ui__input + .custom-placeholder.active {
+               font-size: 12px;
+               color: $grayColor;
+               transform: translateY(-100%);
+            }
+         }
+         .ui__selects {
+            grid-column: span 12;
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 32px;
+            .ui__select {
+               position: relative;
+               width: 100%;
+               .select-box {
+                  position: relative;
+                  padding-bottom: 6px;
+                  border-bottom: 2px solid $grayColor;
+                  cursor: pointer;
+                  transition: 0.3s ease;
+                  &:hover {
+                     border-color: $blue;
+                  }
+                  .selected-item {
+                     color: $mainColor;
+                     font-size: 16px;
+                     line-height: 20px;
+                  }
+                  .arrow {
+                     position: absolute;
+                     top: 30%;
+                     right: 1px;
+                     display: block;
+                     width: 6px;
+                     height: 6px;
+                     border-top: 2px solid $blue;
+                     border-right: 2px solid $blue;
+                     transform: rotate(135deg);
+                     transition: transform 0.3s ease;
+                  }
+               }
+               .options {
+                  list-style-type: none;
+                  position: absolute;
+                  width: 100%;
+                  overflow-y: auto;
+                  max-height: 170px;
+                  background: #fff;
+                  display: none;
+                  &.active {
+                     display: block;
+                  }
+                  .option {
+                     width: 100%;
+                     padding: 8px 24px;
+                  }
                }
             }
          }

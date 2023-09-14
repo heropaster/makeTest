@@ -141,7 +141,127 @@
                             <li class="tab active-tab" id="desktop">Десктоп</li>
                             <li class="tab" id="mobile">Телефон</li>
                         </ul>
+                        <div class="desktop-tab typography__tab">
+                            <div class="text-style">
+                                <div class="text-desc">Заголовок H1, 48/56, bold</div>
+                                <h1 class="text-example h1">Текст заголовка</h1>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Заголовок H2, 32/40, bold</div>
+                                <h2 class="text-example h2">Текст заголовка</h2>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Заголовок H3, 24/32, medium</div>
+                                <h3 class="text-example h3">Текст заголовка</h3>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Заголовок H4, 18/28, medium</div>
+                                <h4 class="text-example h4">Текст заголовка</h4>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Лид P_Lead, 24/32, regular</div>
+                                <p1 class="text-example p-lead">Текст лида</p1>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Крупный текст P_18, 18/28, regular</div>
+                                <p2 class="text-example p-large">Крупный текст</p2>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Основной текст P_16, 16/24, regular</div>
+                                <p3 class="text-example p-primary">Основной текст</p3>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Впомогательный текст P_14, 14/20, regular</div>
+                                <p4 class="text-example p-additionally">Вспомогательный текст</p4>
+                            </div>
+                        </div>
+                        <div class="mobile-tab typography__tab">
+                            <div class="text-style">
+                                <div class="text-desc">Заголовок H1, 48/56, bold</div>
+                                <h1 class="text-example h1">Текст заголовка</h1>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Заголовок H2, 32/40, bold</div>
+                                <h2 class="text-example h2">Текст заголовка</h2>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Заголовок H3, 24/32, medium</div>
+                                <h3 class="text-example h3">Текст заголовка</h3>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Заголовок H4, 18/28, medium</div>
+                                <h4 class="text-example h4">Текст заголовка</h4>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Лид P_Lead, 24/32, regular</div>
+                                <p1 class="text-example p-lead">Текст лида</p1>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Крупный текст P_18, 18/28, regular</div>
+                                <p2 class="text-example p-large">Крупный текст</p2>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Основной текст P_16, 16/24, regular</div>
+                                <p3 class="text-example p-primary">Основной текст</p3>
+                            </div>
+                            <div class="text-style">
+                                <div class="text-desc">Впомогательный текст P_14, 14/20, regular</div>
+                                <p4 class="text-example p-additionally">Вспомогательный текст</p4>
+                            </div>
+                        </div>
                     </div>
+                </section>
+                <section class="section ui">
+                    <h2 class="subtitle">UI</h2>
+                    <section class="ui__division">
+                        <h3 class="ui__subtitle">Текстовое поле</h3>
+                        <div class="ui__inputs">
+                            <div class="ui__input-container">
+                                <input type="email" class="ui__input" id="custom-placeholder-input1" required>
+                                <label for="custom-placeholder-input1" class="custom-placeholder">E-mail</label>
+                                <span class="error-message">Текст ошибки</span>
+                            </div>
+                            <div class="ui__input-container hovered">
+                                <span class="ui__narrative">Ховер</span>
+                                <input type="email" class="ui__input" id="custom-placeholder-input2" disabled>
+                                <label for="custom-placeholder-input2" class="custom-placeholder">E-mail</label><span
+                                    class="error-message">Текст ошибки</span>
+                            </div>
+                            <div class="ui__input-container focused">
+                                <span class="ui__narrative">Ввод</span>
+                                <input type="email" class="ui__input " id="custom-placeholder-input3"
+                                    value="office@make.st" disabled>
+                                <label for="custom-placeholder-input3" class="custom-placeholder">E-mail</label>
+                                <span class="error-message">Текст ошибки</span>
+                            </div>
+                            <div class="ui__input-container error">
+                                <span class="ui__narrative">Ошибка</span>
+                                <input type="email" class="ui__input " id="custom-placeholder-input4"
+                                    value="officemake.st" disabled>
+                                <label for="custom-placeholder-input4" class="custom-placeholder">E-mail</label>
+                                <span class="error-message">Текст ошибки</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="ui__division">
+                        <h3 class="ui__subtitle">Выпадающий список</h3>
+                        <span class="ui__division__description">Компонент состоит из текстового поля и выпадающей
+                            подсказки</span>
+                        <div class="ui__selects">
+                            <div class="ui__select">
+                                <div class="select-box">
+                                    <span class="selected-item">Выберите что-нибудь</span>
+                                    <i class="arrow"></i>
+                                </div>
+                                <ul class="ui__select__options options">
+                                    <li class="option">Первый стул</li>
+                                    <li class="option">Второй стул</li>
+                                    <li class="option">Выбранный пункт</li>
+                                    <li class="option">Теорема Эскобара</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
                 </section>
             </div>
         </div>
@@ -150,6 +270,7 @@
     <footer class="footer container">
         <span>Победа! 😜</span>
     </footer>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
