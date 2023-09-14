@@ -1,5 +1,6 @@
 initInputs()
-
+initSelects()
+// Текстовые поля
 function initInputs() {
    const inputs = document.querySelectorAll('.ui__input')
 
@@ -40,4 +41,31 @@ function initInputs() {
       const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
       return emailPattern.test(email)
    }
+}
+// Выпадающие списки
+function initSelects() {
+   const selectBox = document.querySelector('.select-box')
+   const options = document.querySelector('.options')
+   const optionItems = document.querySelectorAll('.option')
+   selectBox.addEventListener('click', () => {
+      selectBox.classList.toggle('active')
+      selectBox.classList.add('used')
+      options.classList.toggle('active')
+   })
+   optionItems.forEach((item) => {
+      item.addEventListener('click', function () {
+         optionItems.forEach((option) => {
+            option.classList.remove('selected')
+         })
+         this.classList.add('selected')
+         //  Для кастомного плейсхолдера
+         selectBox.classList.remove('used')
+         selectBox.classList.add('used')
+
+         const selectedOption = this.innerHTML
+         document.querySelector('.selected-item').innerHTML = selectedOption
+         selectBox.classList.toggle('active')
+         options.classList.toggle('active')
+      })
+   })
 }
