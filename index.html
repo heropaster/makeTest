@@ -261,6 +261,184 @@
                                     <li class="option">Теорема Эскобара</li>
                                 </ul>
                             </div>
+                            <div class="ui__select">
+                                <div class="select-box hovered">
+                                    <span class="selected-item"></span>
+                                    <span class="custom-placeholder">Выберите что-нибудь</span>
+                                    <i class="arrow"></i>
+                                </div>
+                            </div>
+                            <div class="ui__select">
+                                <div class="select-box active used">
+                                    <span class="selected-item">Выбранный пункт</span>
+                                    <span class="custom-placeholder">Выберите что-нибудь</span>
+                                    <i class="arrow"></i>
+                                </div>
+                                <ul class="ui__select__options options active active-example">
+                                    <li class="option">Первый стул</li>
+                                    <li class="option">Второй стул</li>
+                                    <li class="option selected">Выбранный пункт</li>
+                                    <li class="option hovered">Теорема Эскобара</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="ui__division buttons">
+                        <h3 class="ui__subtitle">Кнопка</h3>
+                        <div class="ui__buttons">
+                            <div class="ui__button-container">
+                                <button class="ui__button">
+                                    <span class="ui__button__text">Отправить</span>
+                                </button>
+                            </div>
+                            <div class="ui__button-container">
+                                <button class="ui__button hovered">
+                                    <span class="ui__button__text">Отправить</span>
+                                </button>
+                            </div>
+                            <div class="ui__button-container">
+                                <button class="ui__button click">
+                                    <span class="ui__button__text">Отправить</span>
+                                </button>
+                            </div>
+                            <div class="ui__button-container">
+                                <span class="narrative">Неактивна</span>
+                                <button class="ui__button disabled" disabled>
+                                    <span class="ui__button__text">Отправить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="ui__division checkboxes">
+                        <h3 class="ui__subtitle">
+                            Чекбокс, радиобаттон
+                        </h3>
+                        <div class="ui__examples">
+                            <div class="checkboxes-examples">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="checkbox-example" class="checkbox">
+                                    <label for="checkbox-example">Выбери меня</label>
+                                    <div class="checkbox-wrapper">
+                                        <div class="checkmark">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10"
+                                                viewBox="0 0 14 10" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.15789 7.14286L12.5263 0L14 1.42857L5.15789 10L0 5L1.47368 3.57143L5.15789 7.14286Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkbox-container hovered">
+                                    <input type="checkbox" id="checkbox-example1" class="checkbox" disabled>
+                                    <label for="checkbox-example1">Выбери меня</label>
+                                    <div class="checkbox-wrapper">
+                                        <div class="checkmark">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10"
+                                                viewBox="0 0 14 10" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.15789 7.14286L12.5263 0L14 1.42857L5.15789 10L0 5L1.47368 3.57143L5.15789 7.14286Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkbox-container checked">
+                                    <input type="checkbox" id="checkbox-example2" class="checkbox">
+                                    <label for="checkbox-example2">Выбери меня</label>
+                                    <div class="checkbox-wrapper">
+                                        <div class="checkmark">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10"
+                                                viewBox="0 0 14 10" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.15789 7.14286L12.5263 0L14 1.42857L5.15789 10L0 5L1.47368 3.57143L5.15789 7.14286Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="radio-examples">
+                                <div class="radio-container">
+                                    <input type="radio" id="radio-example" class="radio">
+                                    <label for="radio-example">Пластмассовый мир победил</label>
+                                    <div class="radio-wrapper">
+                                        <div class="checkmark">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="radio-container hovered">
+                                    <input type="radio" id="radio-example1" class="radio" disabled>
+                                    <label for="radio-example1">Макет оказался сильней</label>
+                                    <div class="radio-wrapper">
+                                        <div class="checkmark">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="radio-container checked">
+                                    <input type="radio" id="radio-example2" class="radio" disabled>
+                                    <label for="radio-example2">Последний кораблик остыл</label>
+                                    <div class="radio-wrapper">
+                                        <div class="checkmark">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="ui__division">
+                        <h3 class="ui__subtitle">
+                            Аккордеон
+                        </h3>
+                        <div class="accordions">
+                            <div class="accordions__example accordion">
+                                <div class="accordion__header">
+                                    <span>Аккордеон</span>
+                                    <div class="arrow"></div>
+                                </div>
+                                <p class="accordion__text">
+                                    Гоpдость полными вагонами золотыми погонами <br>
+                                    С юга дyют молодые вет…<br>
+                                    Pазpывая в клочья облака не забыли шлют из далека<br>
+                                    С дома мама И не последняя любовь<br>
+                                    А по небy бегyт видишь чьи-то следы<br>
+                                    Это может быть ты это может быть я<br>
+                                    Это может наш дрyг<br>
+                                    Это может нам поют свои
+                                </p>
+                            </div>
+                            <div class="accordions__example accordion hovered">
+                                <div class="accordion__header">
+                                    <span>Аккордеон</span>
+                                    <div class="arrow"></div>
+                                </div>
+                                <p class="accordion__text">
+                                    Гоpдость полными вагонами золотыми погонами <br>
+                                    С юга дyют молодые вет…<br>
+                                    Pазpывая в клочья облака не забыли шлют из далека<br>
+                                    С дома мама И не последняя любовь<br>
+                                    А по небy бегyт видишь чьи-то следы<br>
+                                    Это может быть ты это может быть я<br>
+                                    Это может наш дрyг<br>
+                                    Это может нам поют свои
+                                </p>
+                            </div>
+                            <div class="accordions__example accordion active">
+                                <div class="accordion__header">
+                                    <span>Аккордеон</span>
+                                    <div class="arrow"></div>
+                                </div>
+                                <p class="accordion__text">
+                                    Гоpдость полными вагонами золотыми погонами <br>
+                                    С юга дyют молодые вет…<br>
+                                    Pазpывая в клочья облака не забыли шлют из далека<br>
+                                    С дома мама И не последняя любовь<br>
+                                    А по небy бегyт видишь чьи-то следы<br>
+                                    Это может быть ты это может быть я<br>
+                                    Это может наш дрyг<br>
+                                    Это может нам поют свои
+                                </p>
+                            </div>
                         </div>
                     </section>
                 </section>

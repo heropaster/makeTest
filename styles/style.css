@@ -359,6 +359,9 @@ img {
 .main .ui__division:not(:nth-child(1)) {
   margin-top: 40px;
 }
+.main .ui__division.buttons {
+  margin-top: 232px;
+}
 .main .ui__division .ui__subtitle {
   grid-column: span 12;
   font-family: "Graphik Medium";
@@ -501,6 +504,19 @@ img {
   cursor: pointer;
   transition: 0.3s ease;
 }
+.main .ui__division .ui__selects .ui__select .select-box.hovered.hovered {
+  border-color: #3e29e3;
+}
+.main .ui__division .ui__selects .ui__select .select-box.hovered.hovered::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/icons/cursor.svg");
+  position: absolute;
+  right: 55px;
+  bottom: 6px;
+}
 .main .ui__division .ui__selects .ui__select .select-box.used .custom-placeholder {
   font-size: 12px;
   color: #7d7d7d;
@@ -557,9 +573,322 @@ img {
   background-color: #3e29e3;
   color: #fff;
 }
+.main .ui__division .ui__buttons {
+  margin-top: 40px;
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  row-gap: 76px;
+}
+.main .ui__division .ui__buttons .ui__button-container {
+  position: relative;
+}
+.main .ui__division .ui__buttons .ui__button-container .narrative {
+  position: absolute;
+  color: #7d7d7d;
+  font-size: 14px;
+  line-height: 20px;
+  bottom: 80px;
+}
+.main .ui__division .ui__buttons .ui__button-container .ui__button {
+  position: relative;
+  max-width: 148px;
+  border-radius: 32px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Graphik Medium";
+  font-weight: 500;
+  line-height: 24px;
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, #dd80ed 0%, #3d28e3 100%);
+}
+.main .ui__division .ui__buttons .ui__button-container .ui__button__text {
+  position: relative;
+  z-index: 3;
+}
+.main .ui__division .ui__buttons .ui__button-container .ui__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background: linear-gradient(225deg, #dd80ed 0%, #3d28e3 100%);
+}
+.main .ui__division .ui__buttons .ui__button-container .ui__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background: linear-gradient(207deg, #dd80ed 0%, #3d28e3 83.33%);
+}
+.main .ui__division .ui__buttons .ui__button-container .ui__button:hover::before {
+  opacity: 1;
+}
+.main .ui__division .ui__buttons .ui__button-container .ui__button:active::after {
+  opacity: 1;
+}
+.main .ui__division .ui__buttons .ui__button-container .ui__button.click::after {
+  opacity: 1;
+}
+.main .ui__division .ui__buttons .ui__button-container .ui__button.hovered::before {
+  opacity: 1;
+  z-index: 2;
+}
+.main .ui__division .ui__buttons .ui__button-container .ui__button:disabled {
+  background: #cbcbcc !important;
+}
+.main .ui__division .ui__buttons .ui__button-container .ui__button:disabled::after {
+  opacity: 0 !important;
+}
+.main .ui__division .ui__buttons .ui__button-container .ui__button:disabled::before {
+  opacity: 0 !important;
+}
+.main .ui__division .ui__examples {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(60px, min(80px, 8.33vw)));
+}
+.main .ui__division .ui__examples .checkboxes-examples {
+  grid-column: 1/6;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container {
+  display: flex;
+  align-items: center;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container label,
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container .checkbox-wrapper {
+  cursor: pointer;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container label {
+  padding-left: 40px;
+  position: relative;
+  z-index: 2;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container label:hover ~ .checkbox-wrapper {
+  border-color: #3e29e3;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container .checkbox {
+  display: none;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container .checkbox:checked ~ .checkbox-wrapper {
+  background-color: #3e29e3;
+  border-color: #3e29e3;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container .checkbox:checked ~ .checkbox-wrapper .checkmark {
+  opacity: 1;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container .checkbox-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #aeadae;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container .checkbox-wrapper .checkmark {
+  opacity: 0;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container.hovered {
+  position: relative;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container.hovered::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/icons/cursor.svg");
+  position: absolute;
+  left: 144px;
+  bottom: -11px;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container.hovered .checkbox-wrapper {
+  border-color: #3e29e3;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container.checked .checkbox-wrapper {
+  border-color: #3e29e3;
+  background-color: #3e29e3;
+}
+.main .ui__division .ui__examples .checkboxes-examples .checkbox-container.checked .checkbox-wrapper .checkmark {
+  opacity: 1;
+}
+.main .ui__division .ui__examples .radio-examples {
+  grid-column: 6/11;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container {
+  display: flex;
+  align-items: center;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container label,
+.main .ui__division .ui__examples .radio-examples .radio-container .radio-wrapper {
+  cursor: pointer;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container label {
+  padding-left: 40px;
+  position: relative;
+  z-index: 2;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container label:hover ~ .radio-wrapper {
+  border-color: #3e29e3;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container .radio {
+  display: none;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container .radio:checked ~ .radio-wrapper {
+  border-color: #3e29e3;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container .radio:checked ~ .radio-wrapper .checkmark {
+  opacity: 1;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container .radio-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #aeadae;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container .radio-wrapper .checkmark {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3e29e3;
+  opacity: 0;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container.hovered {
+  position: relative;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container.hovered::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/icons/cursor.svg");
+  position: absolute;
+  left: 155px;
+  bottom: -11px;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container.hovered .radio-wrapper {
+  border-color: #3e29e3;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container.checked .radio-wrapper {
+  border-color: #3e29e3;
+}
+.main .ui__division .ui__examples .radio-examples .radio-container.checked .radio-wrapper .checkmark {
+  opacity: 1;
+}
+.main .ui__division .accordions {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(60px, min(80px, 8.33vw)));
+  row-gap: 24px;
+}
+.main .ui__division .accordions .accordion {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(60px, min(80px, 8.33vw)));
+  width: 100%;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #cbcbcc;
+  transition: border-color 0.3s ease;
+}
+.main .ui__division .accordions .accordion:hover {
+  border-color: #3e29e3;
+}
+.main .ui__division .accordions .accordion:hover .accordion__header {
+  color: #1b1b1b;
+}
+.main .ui__division .accordions .accordion__header {
+  grid-column: span 12;
+  position: relative;
+  color: #7d7d7d;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Graphik Medium";
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.main .ui__division .accordions .accordion__header .arrow {
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #3e29e3;
+  border-right: 2px solid #3e29e3;
+  transform: rotate(135deg);
+  transition: transform 0.3s ease;
+}
+.main .ui__division .accordions .accordion__text {
+  color: #1b1b1b;
+  line-height: 24px;
+  grid-column: span 8;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease, margin 0.3s ease;
+}
+.main .ui__division .accordions .accordion.active {
+  border-color: #3e29e3;
+}
+.main .ui__division .accordions .accordion.active .arrow {
+  transform: rotate(-45deg);
+}
+.main .ui__division .accordions .accordion.active .accordion__text {
+  margin-top: 24px;
+  margin-bottom: 15px;
+  height: 100%;
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+.main .ui__division .accordions .accordion.active .accordion__header {
+  color: #1b1b1b;
+}
+.main .ui__division .accordions .accordion.hovered {
+  position: relative;
+  border-color: #3e29e3;
+}
+.main .ui__division .accordions .accordion.hovered::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/icons/cursor.svg");
+  position: absolute;
+  left: 33%;
+  bottom: 5px;
+}
+.main .ui__division .accordions .accordion.hovered .accordion__header {
+  color: #1b1b1b;
+}
 
 .footer {
-  margin-top: 160px;
+  margin-top: 120px;
   padding-bottom: 48px;
   justify-content: center;
   justify-items: center;

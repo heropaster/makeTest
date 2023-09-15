@@ -1,5 +1,6 @@
 initInputs()
 initSelects()
+initAccordions()
 // Текстовые поля
 function initInputs() {
    const inputs = document.querySelectorAll('.ui__input')
@@ -46,7 +47,7 @@ function initInputs() {
 function initSelects() {
    const selectBox = document.querySelector('.select-box')
    const options = document.querySelector('.options')
-   const optionItems = document.querySelectorAll('.option')
+   const optionItems = options.querySelectorAll('.option')
    selectBox.addEventListener('click', () => {
       selectBox.classList.toggle('active')
       selectBox.classList.add('used')
@@ -67,5 +68,14 @@ function initSelects() {
          selectBox.classList.toggle('active')
          options.classList.toggle('active')
       })
+   })
+}
+// Аккордионы
+function initAccordions() {
+   const accordions = document.querySelectorAll('.accordion')
+   const headers = accordions[0].querySelector('.accordion__header')
+
+   headers.addEventListener('click', () => {
+      accordions[0].classList.toggle('active')
    })
 }
