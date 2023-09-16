@@ -52,16 +52,32 @@ img {
   color: #7d7d7d;
 }
 .header .menu {
+  z-index: 100;
+  cursor: pointer;
+  height: 50px !important;
   margin-top: 8px;
   height: 10px;
   grid-column: 12/12;
   position: relative;
 }
+.header .menu.active .menu__line {
+  background-color: #fff;
+}
+.header .menu.active .menu__line.first-line {
+  transform: rotate(45deg);
+}
+.header .menu.active .menu__line.second-line {
+  transform: rotate(135deg);
+  top: 0;
+  left: 0;
+  width: 32px;
+}
 .header .menu__line {
   display: block;
   position: absolute;
-  background: #7d7d7d;
+  background-color: #7d7d7d;
   height: 3px;
+  transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s ease, left 0.3s ease, width 0.3s ease;
 }
 .header .menu__line.first-line {
   width: 32px;
@@ -71,6 +87,113 @@ img {
   width: 24px;
   left: 8px;
   top: 9px;
+}
+
+.menu-layout {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transform: translateX(-100%);
+  background: url("../images/png/menuBg.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 8px;
+}
+.menu-layout.active {
+  transform: translateX(0);
+}
+.menu-layout .menu__content {
+  grid-column: span 7;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(60px, min(80px, 8.33vw)));
+  grid-auto-rows: minmax(0, -webkit-max-content);
+  grid-auto-rows: minmax(0, max-content);
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  background: #fff;
+  padding: 24px 56px;
+}
+.menu-layout .menu__content__heading {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(60px, min(80px, 8.33vw)));
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 16px;
+  color: #7d7d7d;
+  line-height: 20px;
+  align-items: center;
+}
+.menu-layout .menu__content__heading .logo {
+  height: 56px;
+}
+.menu-layout .menu__content__heading span {
+  grid-column: span 11;
+}
+.menu-layout .menu__content__main {
+  margin-top: 64px;
+  grid-column: 2/12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(60px, min(80px, 8.33vw)));
+  color: #1b1b1b;
+}
+.menu-layout .menu__content__main .performer {
+  font-size: 32px;
+  line-height: 40px;
+  grid-column: span 12;
+}
+.menu-layout .menu__content__main .desc {
+  margin-top: 24px;
+  grid-column: span 8;
+  font-size: 16px;
+  line-height: 24px;
+}
+.menu-layout .menu__content__main .phone {
+  margin-top: 32px;
+  grid-column: span 12;
+  font-family: "Graphik Medium";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+.menu-layout .menu__content .socials {
+  grid-column: 2/12;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #3e29e3;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Graphik Medium";
+  font-weight: 500;
+  margin-top: 52vh;
+}
+.menu-layout .menu__content .socials__circle {
+  position: relative;
+  display: block;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.menu-layout .menu__content .socials__circle .first-shape {
+  position: absolute;
+  left: 39%;
+  top: 33%;
+}
+.menu-layout .menu__content .socials__circle .second-shape {
+  position: absolute;
+  left: 58%;
+  top: 17%;
 }
 
 .aside-menu {
@@ -84,6 +207,7 @@ img {
 .aside-menu__link {
   font-size: 14px;
   line-height: 20px;
+  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -224,6 +348,7 @@ img {
   font-family: "Graphik Medium";
   font-weight: 500;
   position: relative;
+  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -863,6 +988,7 @@ img {
   margin-top: 24px;
   margin-bottom: 15px;
   height: 100%;
+  max-height: -webkit-max-content;
   max-height: -moz-max-content;
   max-height: max-content;
 }
@@ -904,4 +1030,4 @@ img {
     -moz-column-gap: 32px;
          column-gap: 32px;
   }
-}/*# sourceMappingURL=style.css.map */
+}

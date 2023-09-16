@@ -1,455 +1,704 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link
+			rel="stylesheet prefetch"
+			href="https://cdn.rawgit.com/mfd/e7842774e037edf15919037594a79b2b/raw/665bdfc532094318449f1010323c84013d5af953/graphik.css"
+		/>
+		<link rel="stylesheet" href="./styles/style.css" />
+		<title>MakeAgency</title>
+	</head>
 
-    <link rel="stylesheet prefetch"
-        href="https://cdn.rawgit.com/mfd/e7842774e037edf15919037594a79b2b/raw/665bdfc532094318449f1010323c84013d5af953/graphik.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>MakeAgency</title>
-</head>
+	<body>
+		<header class="header container">
+			<div class="user">
+				<div class="user__icon">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="56"
+						height="56"
+						viewBox="0 0 56 56"
+						fill="none"
+					>
+						<g filter="url(#filter0_d_0_117)">
+							<path
+								d="M28 44C39.0457 44 48 35.0457 48 24C48 12.9543 39.0457 4 28 4C16.9543 4 8 12.9543 8 24C8 35.0457 16.9543 44 28 44Z"
+								fill="#FF3A62"
+							/>
+						</g>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M30.5187 26.8962H28.9211L30.9781 29.328H29.8093L26.7521 25.9313H27.5434H29.5978C32.1823 25.9313 34.2762 23.9072 34.2762 21.4259C34.2762 20.3573 33.8868 19.366 33.2376 18.5951C32.4551 17.4312 33.3587 16.5779 34.1608 16.5779C33.9575 15.6691 32.8464 15.601 32.8464 15.601C32.7226 15.2431 32.4081 14.7143 31.7979 14.7143H30.2018C30.1808 14.7143 30.1603 14.7174 30.1401 14.7205L30.1401 14.7205C30.1231 14.7231 30.1064 14.7256 30.0898 14.7262C29.3049 14.8101 28.544 15.383 29.3042 16.5115L29.3045 16.5119C29.3238 16.5388 30.3915 18.0205 30.3915 19.5439C30.3915 22.1418 28.1994 24.4236 25.4935 24.4236H20.5112H19.5504H14.4286C14.4286 25.2679 15.0932 25.9313 15.9133 25.9313H19.1454H25.2097L28.077 29.328H19.1454V31.8378H37.8085V29.328H32.7115L30.5187 26.8962ZM28.2966 22.4761C29.0808 21.6869 29.5306 20.6207 29.5306 19.5545C29.5306 18.2689 28.5826 16.9372 28.5729 16.924L28.5671 16.9142L28.5606 16.9036C28.3496 16.5923 28.2302 16.3177 28.1733 16.0661L21.0357 23.7266H25.3616C26.4572 23.7266 27.4996 23.2781 28.2966 22.4761ZM15.8444 31.8378H18.2041V29.3032H15.8444V31.8378ZM38.8235 31.8572V29.3232L40.8572 30.5354L38.8235 31.8572ZM31.0937 16.3816C31.3272 16.3816 31.5162 16.2001 31.5162 15.9761C31.5162 15.752 31.3272 15.5705 31.0937 15.5705C30.8603 15.5705 30.6711 15.752 30.6711 15.9761C30.6711 16.2001 30.8603 16.3816 31.0937 16.3816Z"
+							fill="white"
+						/>
+						<defs>
+							<filter
+								id="filter0_d_0_117"
+								x="0"
+								y="0"
+								width="56"
+								height="56"
+								filterUnits="userSpaceOnUse"
+								color-interpolation-filters="sRGB"
+							>
+								<feFlood flood-opacity="0" result="BackgroundImageFix" />
+								<feColorMatrix
+									in="SourceAlpha"
+									type="matrix"
+									values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+									result="hardAlpha"
+								/>
+								<feOffset dy="4" />
+								<feGaussianBlur stdDeviation="4" />
+								<feColorMatrix
+									type="matrix"
+									values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
+								/>
+								<feBlend
+									mode="normal"
+									in2="BackgroundImageFix"
+									result="effect1_dropShadow_0_117"
+								/>
+								<feBlend
+									mode="normal"
+									in="SourceGraphic"
+									in2="effect1_dropShadow_0_117"
+									result="shape"
+								/>
+							</filter>
+						</defs>
+					</svg>
+				</div>
+				<div class="user__name name">
+					<span class="name__surname">Ридель</span>
+					<span class="name__middlename">Дмитрий Евгеньевич</span>
+				</div>
+			</div>
+			<div class="menu">
+				<span class="menu__line first-line"></span>
+				<span class="menu__line second-line"></span>
+			</div>
+		</header>
+		<div class="menu-layout">
+			<div class="menu__content">
+				<div class="menu__content__heading">
+					<div class="logo">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="56"
+							height="56"
+							viewBox="0 0 56 56"
+							fill="none"
+						>
+							<g filter="url(#filter0_d_0_117)">
+								<path
+									d="M28 44C39.0457 44 48 35.0457 48 24C48 12.9543 39.0457 4 28 4C16.9543 4 8 12.9543 8 24C8 35.0457 16.9543 44 28 44Z"
+									fill="#FF3A62"
+								/>
+							</g>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M30.5187 26.8962H28.9211L30.9781 29.328H29.8093L26.7521 25.9313H27.5434H29.5978C32.1823 25.9313 34.2762 23.9072 34.2762 21.4259C34.2762 20.3573 33.8868 19.366 33.2376 18.5951C32.4551 17.4312 33.3587 16.5779 34.1608 16.5779C33.9575 15.6691 32.8464 15.601 32.8464 15.601C32.7226 15.2431 32.4081 14.7143 31.7979 14.7143H30.2018C30.1808 14.7143 30.1603 14.7174 30.1401 14.7205L30.1401 14.7205C30.1231 14.7231 30.1064 14.7256 30.0898 14.7262C29.3049 14.8101 28.544 15.383 29.3042 16.5115L29.3045 16.5119C29.3238 16.5388 30.3915 18.0205 30.3915 19.5439C30.3915 22.1418 28.1994 24.4236 25.4935 24.4236H20.5112H19.5504H14.4286C14.4286 25.2679 15.0932 25.9313 15.9133 25.9313H19.1454H25.2097L28.077 29.328H19.1454V31.8378H37.8085V29.328H32.7115L30.5187 26.8962ZM28.2966 22.4761C29.0808 21.6869 29.5306 20.6207 29.5306 19.5545C29.5306 18.2689 28.5826 16.9372 28.5729 16.924L28.5671 16.9142L28.5606 16.9036C28.3496 16.5923 28.2302 16.3177 28.1733 16.0661L21.0357 23.7266H25.3616C26.4572 23.7266 27.4996 23.2781 28.2966 22.4761ZM15.8444 31.8378H18.2041V29.3032H15.8444V31.8378ZM38.8235 31.8572V29.3232L40.8572 30.5354L38.8235 31.8572ZM31.0937 16.3816C31.3272 16.3816 31.5162 16.2001 31.5162 15.9761C31.5162 15.752 31.3272 15.5705 31.0937 15.5705C30.8603 15.5705 30.6711 15.752 30.6711 15.9761C30.6711 16.2001 30.8603 16.3816 31.0937 16.3816Z"
+								fill="white"
+							/>
+							<defs>
+								<filter
+									id="filter0_d_0_117"
+									x="0"
+									y="0"
+									width="56"
+									height="56"
+									filterUnits="userSpaceOnUse"
+									color-interpolation-filters="sRGB"
+								>
+									<feFlood flood-opacity="0" result="BackgroundImageFix" />
+									<feColorMatrix
+										in="SourceAlpha"
+										type="matrix"
+										values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+										result="hardAlpha"
+									/>
+									<feOffset dy="4" />
+									<feGaussianBlur stdDeviation="4" />
+									<feColorMatrix
+										type="matrix"
+										values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
+									/>
+									<feBlend
+										mode="normal"
+										in2="BackgroundImageFix"
+										result="effect1_dropShadow_0_117"
+									/>
+									<feBlend
+										mode="normal"
+										in="SourceGraphic"
+										in2="effect1_dropShadow_0_117"
+										result="shape"
+									/>
+								</filter>
+							</defs>
+						</svg>
+					</div>
+					<span>Задание выполнил</span>
+				</div>
+				<div class="menu__content__main">
+					<h2 class="performer">
+						Ридель <br />
+						Дмитрий Евгеньевич
+					</h2>
+					<p class="desc">
+						Программист самоучка. Фронтенд разработкой занимаюсь больше года. В
+						стек входит: React, TypeScript, Js, SCSS
+					</p>
+					<span class="phone">
+						<a href="tel:+79234358948"> + 7 (923) 435-89-48</a>
+					</span>
+				</div>
+				<a href="https://t.me/Heropaster" target="_blank" class="socials">
+					<span class="socials__circle">
+						<span class="first-shape">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="12"
+								height="12"
+								viewBox="0 0 12 12"
+								fill="none"
+							>
+								<path d="M12 12H0L0 0H6V2H2V10H10V6H12V12Z" fill="#3E29E3" />
+							</svg>
+						</span>
+						<span class="second-shape">
+							<svg
+								width="6"
+								height="6"
+								viewBox="0 0 6 6"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path d="M6 0V6H4V2H0V0H6Z" fill="#3E29E3" />
+							</svg>
+						</span>
+					</span>
+					<span class="socials__link">t.me/Heropaster</span>
+				</a>
+			</div>
+		</div>
+		<div class="container">
+			<aside class="aside-menu">
+				<a href="#" class="aside-menu__link active-link">Напутственное слово</a>
+				<a href="#" class="aside-menu__link hovered">Сетка</a>
+				<a href="#" class="aside-menu__link">Типография</a>
+				<a href="#" class="aside-menu__link">UI</a>
+			</aside>
+			<div class="main">
+				<div class="main__heading">
+					<h1 class="title">Тестовое задание</h1>
+					<span class="level">Уровень: junior</span>
+				</div>
+				<div class="main__content">
+					<p class="preface">
+						Привет! Твоё тестовое задание — грамотно заверстать эту прекрасную
+						страничку. В шапке страницы укажи своё ФИО, так всем будет удобнее.
+						В менюхе под иконкой бургером мы хотели бы также видеть твои данные.
+						Ну что, поехали?
+					</p>
+					<section class="main__grid grid section">
+						<h2 class="subtitle">Сетка</h2>
+						<p class="section__text">
+							Задание предполагает адаптивную вёрстку. Используется 3 состояния
+							в зависимости от устройства. Сетка «резиновая» — переменной
+							ширины.
+						</p>
+						<section class="grid__division">
+							<h3 class="grid__subtitle">Десктоп (1200+)</h3>
+							<ul class="grid__table table">
+								<li class="table__content-width table__item">
+									Контент
+									<p class="table__item__value">1072–1312</p>
+								</li>
+								<li class="table__columns table__item">
+									Колонок
+									<p class="table__item__value">12</p>
+								</li>
+								<li class="table__column-width table__item">
+									Ширина колонки
+									<p class="table__item__value">60-80</p>
+								</li>
+								<li class="table__column-gap table__item">
+									Межколонник
+									<p class="table__item__value">32</p>
+								</li>
+							</ul>
+							<div class="grid__image">
+								<img src="./images/png/desktop.png" alt="Desktop grid" />
+							</div>
+						</section>
+						<section class="grid__division">
+							<h3 class="grid__subtitle">Планшет (736+)</h3>
+							<ul class="grid__table table">
+								<li class="table__content-width table__item">
+									Контент
+									<p class="table__item__value">672–928</p>
+								</li>
+								<li class="table__columns table__item">
+									Колонок
+									<p class="table__item__value">8</p>
+								</li>
+								<li class="table__column-width table__item">
+									Ширина колонки
+									<p class="table__item__value">56-68</p>
+								</li>
+								<li class="table__column-gap table__item">
+									Межколонник
+									<p class="table__item__value">32</p>
+								</li>
+							</ul>
+							<div class="grid__image">
+								<img src="./images/png/tablet.png" alt="table grid" />
+							</div>
+						</section>
+						<section class="grid__division">
+							<h3 class="grid__subtitle">Телефон (320+)</h3>
+							<ul class="grid__table table">
+								<li class="table__content-width table__item">
+									Контент
+									<p class="table__item__value">296–424</p>
+								</li>
+								<li class="table__columns table__item">
+									Колонок
+									<p class="table__item__value">4</p>
+								</li>
+								<li class="table__column-width table__item">
+									Ширина колонки
+									<p class="table__item__value">56-88</p>
+								</li>
+								<li class="table__column-gap table__item">
+									Межколонник
+									<p class="table__item__value">24</p>
+								</li>
+							</ul>
+							<div class="grid__image">
+								<img src="./images/png/mobile.png" alt="mobile grid" />
+							</div>
+						</section>
+					</section>
+					<section class="section main__typography typography">
+						<h2 class="subtitle">Типография</h2>
+						<p class="section__text">
+							Используется шрифт Graphik. На телефонах стили типографики
+							переопределяются
+						</p>
+						<div class="typography__content">
+							<ul class="typography__tabs">
+								<li class="tab active-tab" id="desktop">Десктоп</li>
+								<li class="tab" id="mobile">Телефон</li>
+							</ul>
+							<div class="desktop-tab typography__tab">
+								<div class="text-style">
+									<div class="text-desc">Заголовок H1, 48/56, bold</div>
+									<h1 class="text-example h1">Текст заголовка</h1>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">Заголовок H2, 32/40, bold</div>
+									<h2 class="text-example h2">Текст заголовка</h2>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">Заголовок H3, 24/32, medium</div>
+									<h3 class="text-example h3">Текст заголовка</h3>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">Заголовок H4, 18/28, medium</div>
+									<h4 class="text-example h4">Текст заголовка</h4>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">Лид P_Lead, 24/32, regular</div>
+									<p1 class="text-example p-lead">Текст лида</p1>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">
+										Крупный текст P_18, 18/28, regular
+									</div>
+									<p2 class="text-example p-large">Крупный текст</p2>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">
+										Основной текст P_16, 16/24, regular
+									</div>
+									<p3 class="text-example p-primary">Основной текст</p3>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">
+										Впомогательный текст P_14, 14/20, regular
+									</div>
+									<p4 class="text-example p-additionally"
+										>Вспомогательный текст</p4
+									>
+								</div>
+							</div>
+							<div class="mobile-tab typography__tab">
+								<div class="text-style">
+									<div class="text-desc">Заголовок H1, 48/56, bold</div>
+									<h1 class="text-example h1">Текст заголовка</h1>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">Заголовок H2, 32/40, bold</div>
+									<h2 class="text-example h2">Текст заголовка</h2>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">Заголовок H3, 24/32, medium</div>
+									<h3 class="text-example h3">Текст заголовка</h3>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">Заголовок H4, 18/28, medium</div>
+									<h4 class="text-example h4">Текст заголовка</h4>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">Лид P_Lead, 24/32, regular</div>
+									<p1 class="text-example p-lead">Текст лида</p1>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">
+										Крупный текст P_18, 18/28, regular
+									</div>
+									<p2 class="text-example p-large">Крупный текст</p2>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">
+										Основной текст P_16, 16/24, regular
+									</div>
+									<p3 class="text-example p-primary">Основной текст</p3>
+								</div>
+								<div class="text-style">
+									<div class="text-desc">
+										Впомогательный текст P_14, 14/20, regular
+									</div>
+									<p4 class="text-example p-additionally"
+										>Вспомогательный текст</p4
+									>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="section ui">
+						<h2 class="subtitle">UI</h2>
+						<section class="ui__division">
+							<h3 class="ui__subtitle">Текстовое поле</h3>
+							<div class="ui__inputs">
+								<div class="ui__input-container">
+									<input
+										type="email"
+										class="ui__input"
+										id="custom-placeholder-input1"
+										required
+									/>
+									<label
+										for="custom-placeholder-input1"
+										class="custom-placeholder"
+										>E-mail</label
+									>
+									<span class="error-message">Текст ошибки</span>
+								</div>
+								<div class="ui__input-container hovered">
+									<span class="ui__narrative">Ховер</span>
+									<input
+										type="email"
+										class="ui__input"
+										id="custom-placeholder-input2"
+										disabled
+									/>
+									<label
+										for="custom-placeholder-input2"
+										class="custom-placeholder"
+										>E-mail</label
+									><span class="error-message">Текст ошибки</span>
+								</div>
+								<div class="ui__input-container focused">
+									<span class="ui__narrative">Ввод</span>
+									<input
+										type="email"
+										class="ui__input"
+										id="custom-placeholder-input3"
+										value="office@make.st"
+										disabled
+									/>
+									<label
+										for="custom-placeholder-input3"
+										class="custom-placeholder"
+										>E-mail</label
+									>
+									<span class="error-message">Текст ошибки</span>
+								</div>
+								<div class="ui__input-container error">
+									<span class="ui__narrative">Ошибка</span>
+									<input
+										type="email"
+										class="ui__input"
+										id="custom-placeholder-input4"
+										value="officemake.st"
+										disabled
+									/>
+									<label
+										for="custom-placeholder-input4"
+										class="custom-placeholder"
+										>E-mail</label
+									>
+									<span class="error-message">Текст ошибки</span>
+								</div>
+							</div>
+						</section>
+						<section class="ui__division selectors">
+							<h3 class="ui__subtitle">Выпадающий список</h3>
+							<span class="ui__division__description"
+								>Компонент состоит из текстового поля и выпадающей
+								подсказки</span
+							>
+							<div class="ui__selects">
+								<div class="ui__select">
+									<div class="select-box">
+										<span class="selected-item"></span>
+										<span class="custom-placeholder">Выберите что-нибудь</span>
+										<i class="arrow"></i>
+									</div>
+									<ul class="ui__select__options options">
+										<li class="option">Первый стул</li>
+										<li class="option">Второй стул</li>
+										<li class="option">Выбранный пункт</li>
+										<li class="option">Теорема Эскобара</li>
+									</ul>
+								</div>
+								<div class="ui__select">
+									<div class="select-box hovered">
+										<span class="selected-item"></span>
+										<span class="custom-placeholder">Выберите что-нибудь</span>
+										<i class="arrow"></i>
+									</div>
+								</div>
+								<div class="ui__select">
+									<div class="select-box active used">
+										<span class="selected-item">Выбранный пункт</span>
+										<span class="custom-placeholder">Выберите что-нибудь</span>
+										<i class="arrow"></i>
+									</div>
+									<ul class="ui__select__options options active active-example">
+										<li class="option">Первый стул</li>
+										<li class="option">Второй стул</li>
+										<li class="option selected">Выбранный пункт</li>
+										<li class="option hovered">Теорема Эскобара</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section class="ui__division buttons">
+							<h3 class="ui__subtitle">Кнопка</h3>
+							<div class="ui__buttons">
+								<div class="ui__button-container">
+									<button class="ui__button">
+										<span class="ui__button__text">Отправить</span>
+									</button>
+								</div>
+								<div class="ui__button-container">
+									<button class="ui__button hovered">
+										<span class="ui__button__text">Отправить</span>
+									</button>
+								</div>
+								<div class="ui__button-container">
+									<button class="ui__button click">
+										<span class="ui__button__text">Отправить</span>
+									</button>
+								</div>
+								<div class="ui__button-container">
+									<span class="narrative">Неактивна</span>
+									<button class="ui__button disabled" disabled>
+										<span class="ui__button__text">Отправить</span>
+									</button>
+								</div>
+							</div>
+						</section>
+						<section class="ui__division checkboxes">
+							<h3 class="ui__subtitle">Чекбокс, радиобаттон</h3>
+							<div class="ui__examples">
+								<div class="checkboxes-examples">
+									<div class="checkbox-container">
+										<input
+											type="checkbox"
+											id="checkbox-example"
+											class="checkbox"
+										/>
+										<label for="checkbox-example">Выбери меня</label>
+										<div class="checkbox-wrapper">
+											<div class="checkmark">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="14"
+													height="10"
+													viewBox="0 0 14 10"
+													fill="none"
+												>
+													<path
+														fill-rule="evenodd"
+														clip-rule="evenodd"
+														d="M5.15789 7.14286L12.5263 0L14 1.42857L5.15789 10L0 5L1.47368 3.57143L5.15789 7.14286Z"
+														fill="white"
+													/>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="checkbox-container hovered">
+										<input
+											type="checkbox"
+											id="checkbox-example1"
+											class="checkbox"
+											disabled
+										/>
+										<label for="checkbox-example1">Выбери меня</label>
+										<div class="checkbox-wrapper">
+											<div class="checkmark">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="14"
+													height="10"
+													viewBox="0 0 14 10"
+													fill="none"
+												>
+													<path
+														fill-rule="evenodd"
+														clip-rule="evenodd"
+														d="M5.15789 7.14286L12.5263 0L14 1.42857L5.15789 10L0 5L1.47368 3.57143L5.15789 7.14286Z"
+														fill="white"
+													/>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="checkbox-container checked">
+										<input
+											type="checkbox"
+											id="checkbox-example2"
+											class="checkbox"
+										/>
+										<label for="checkbox-example2">Выбери меня</label>
+										<div class="checkbox-wrapper">
+											<div class="checkmark">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="14"
+													height="10"
+													viewBox="0 0 14 10"
+													fill="none"
+												>
+													<path
+														fill-rule="evenodd"
+														clip-rule="evenodd"
+														d="M5.15789 7.14286L12.5263 0L14 1.42857L5.15789 10L0 5L1.47368 3.57143L5.15789 7.14286Z"
+														fill="white"
+													/>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="radio-examples">
+									<div class="radio-container">
+										<input type="radio" id="radio-example" class="radio" />
+										<label for="radio-example">Пластмассовый мир победил</label>
+										<div class="radio-wrapper">
+											<div class="checkmark"></div>
+										</div>
+									</div>
+									<div class="radio-container hovered">
+										<input
+											type="radio"
+											id="radio-example1"
+											class="radio"
+											disabled
+										/>
+										<label for="radio-example1">Макет оказался сильней</label>
+										<div class="radio-wrapper">
+											<div class="checkmark"></div>
+										</div>
+									</div>
+									<div class="radio-container checked">
+										<input
+											type="radio"
+											id="radio-example2"
+											class="radio"
+											disabled
+										/>
+										<label for="radio-example2">Последний кораблик остыл</label>
+										<div class="radio-wrapper">
+											<div class="checkmark"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="ui__division">
+							<h3 class="ui__subtitle">Аккордеон</h3>
+							<div class="accordions">
+								<div class="accordions__example accordion">
+									<div class="accordion__header">
+										<span>Аккордеон</span>
+										<div class="arrow"></div>
+									</div>
+									<p class="accordion__text">
+										Гоpдость полными вагонами золотыми погонами <br />
+										С юга дyют молодые вет…<br />
+										Pазpывая в клочья облака не забыли шлют из далека<br />
+										С дома мама И не последняя любовь<br />
+										А по небy бегyт видишь чьи-то следы<br />
+										Это может быть ты это может быть я<br />
+										Это может наш дрyг<br />
+										Это может нам поют свои
+									</p>
+								</div>
+								<div class="accordions__example accordion hovered">
+									<div class="accordion__header">
+										<span>Аккордеон</span>
+										<div class="arrow"></div>
+									</div>
+									<p class="accordion__text">
+										Гоpдость полными вагонами золотыми погонами <br />
+										С юга дyют молодые вет…<br />
+										Pазpывая в клочья облака не забыли шлют из далека<br />
+										С дома мама И не последняя любовь<br />
+										А по небy бегyт видишь чьи-то следы<br />
+										Это может быть ты это может быть я<br />
+										Это может наш дрyг<br />
+										Это может нам поют свои
+									</p>
+								</div>
+								<div class="accordions__example accordion active">
+									<div class="accordion__header">
+										<span>Аккордеон</span>
+										<div class="arrow"></div>
+									</div>
+									<p class="accordion__text">
+										Гоpдость полными вагонами золотыми погонами <br />
+										С юга дyют молодые вет…<br />
+										Pазpывая в клочья облака не забыли шлют из далека<br />
+										С дома мама И не последняя любовь<br />
+										А по небy бегyт видишь чьи-то следы<br />
+										Это может быть ты это может быть я<br />
+										Это может наш дрyг<br />
+										Это может нам поют свои
+									</p>
+								</div>
+							</div>
+						</section>
+					</section>
+				</div>
+			</div>
+		</div>
 
-<body>
-    <header class="header container">
-        <div class="user">
-            <div class="user__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                    <g filter="url(#filter0_d_0_117)">
-                        <path
-                            d="M28 44C39.0457 44 48 35.0457 48 24C48 12.9543 39.0457 4 28 4C16.9543 4 8 12.9543 8 24C8 35.0457 16.9543 44 28 44Z"
-                            fill="#FF3A62" />
-                    </g>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M30.5187 26.8962H28.9211L30.9781 29.328H29.8093L26.7521 25.9313H27.5434H29.5978C32.1823 25.9313 34.2762 23.9072 34.2762 21.4259C34.2762 20.3573 33.8868 19.366 33.2376 18.5951C32.4551 17.4312 33.3587 16.5779 34.1608 16.5779C33.9575 15.6691 32.8464 15.601 32.8464 15.601C32.7226 15.2431 32.4081 14.7143 31.7979 14.7143H30.2018C30.1808 14.7143 30.1603 14.7174 30.1401 14.7205L30.1401 14.7205C30.1231 14.7231 30.1064 14.7256 30.0898 14.7262C29.3049 14.8101 28.544 15.383 29.3042 16.5115L29.3045 16.5119C29.3238 16.5388 30.3915 18.0205 30.3915 19.5439C30.3915 22.1418 28.1994 24.4236 25.4935 24.4236H20.5112H19.5504H14.4286C14.4286 25.2679 15.0932 25.9313 15.9133 25.9313H19.1454H25.2097L28.077 29.328H19.1454V31.8378H37.8085V29.328H32.7115L30.5187 26.8962ZM28.2966 22.4761C29.0808 21.6869 29.5306 20.6207 29.5306 19.5545C29.5306 18.2689 28.5826 16.9372 28.5729 16.924L28.5671 16.9142L28.5606 16.9036C28.3496 16.5923 28.2302 16.3177 28.1733 16.0661L21.0357 23.7266H25.3616C26.4572 23.7266 27.4996 23.2781 28.2966 22.4761ZM15.8444 31.8378H18.2041V29.3032H15.8444V31.8378ZM38.8235 31.8572V29.3232L40.8572 30.5354L38.8235 31.8572ZM31.0937 16.3816C31.3272 16.3816 31.5162 16.2001 31.5162 15.9761C31.5162 15.752 31.3272 15.5705 31.0937 15.5705C30.8603 15.5705 30.6711 15.752 30.6711 15.9761C30.6711 16.2001 30.8603 16.3816 31.0937 16.3816Z"
-                        fill="white" />
-                    <defs>
-                        <filter id="filter0_d_0_117" x="0" y="0" width="56" height="56" filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                            <feColorMatrix in="SourceAlpha" type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                            <feOffset dy="4" />
-                            <feGaussianBlur stdDeviation="4" />
-                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0" />
-                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_117" />
-                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_117" result="shape" />
-                        </filter>
-                    </defs>
-                </svg>
-            </div>
-            <div class="user__name name">
-                <span class="name__surname">Ридель</span>
-                <span class="name__middlename">Дмитрий Евгеньевич</span>
-            </div>
-        </div>
-        <div class="menu">
-            <span class="menu__line first-line"></span>
-            <span class="menu__line second-line"></span>
-        </div>
-    </header>
-    <div class="container">
-        <aside class="aside-menu">
-            <a href="#" class="aside-menu__link active-link">Напутственное слово</a>
-            <a href="#" class="aside-menu__link hovered">Сетка</a>
-            <a href="#" class="aside-menu__link">Типография</a>
-            <a href="#" class="aside-menu__link">UI</a>
-        </aside>
-        <div class="main">
-            <div class="main__heading">
-                <h1 class="title">
-                    Тестовое задание
-                </h1>
-                <span class="level">Уровень: junior</span>
-            </div>
-            <div class="main__content">
-                <p class="preface">Привет! Твоё тестовое задание — грамотно заверстать эту прекрасную страничку. В шапке
-                    страницы укажи своё ФИО, так всем будет удобнее. В менюхе под иконкой бургером мы хотели бы также
-                    видеть твои данные. Ну что, поехали?</p>
-                <section class="main__grid grid section">
-                    <h2 class="subtitle">Сетка</h2>
-                    <p class="section__text">Задание предполагает адаптивную вёрстку. Используется 3 состояния
-                        в зависимости от устройства. Сетка «резиновая» — переменной ширины.</p>
-                    <section class="grid__division">
-                        <h3 class="grid__subtitle">Десктоп (1200+)</h3>
-                        <ul class="grid__table table">
-                            <li class="table__content-width table__item">Контент
-                                <p class="table__item__value">1072–1312</p>
-                            </li>
-                            <li class="table__columns table__item">Колонок
-                                <p class="table__item__value">12</p>
-                            </li>
-                            <li class="table__column-width table__item">Ширина колонки
-                                <p class="table__item__value">60-80</p>
-                            </li>
-                            <li class="table__column-gap table__item">Межколонник
-                                <p class="table__item__value">32</p>
-                            </li>
-                        </ul>
-                        <div class="grid__image">
-                            <img src="./images/png/desktop.png" alt="Desktop grid">
-                        </div>
-                    </section>
-                    <section class="grid__division">
-                        <h3 class="grid__subtitle">Планшет (736+)</h3>
-                        <ul class="grid__table table">
-                            <li class="table__content-width table__item">Контент
-                                <p class="table__item__value">672–928</p>
-                            </li>
-                            <li class="table__columns table__item">Колонок
-                                <p class="table__item__value">8</p>
-                            </li>
-                            <li class="table__column-width table__item">Ширина колонки
-                                <p class="table__item__value">56-68</p>
-                            </li>
-                            <li class="table__column-gap table__item">Межколонник
-                                <p class="table__item__value">32</p>
-                            </li>
-                        </ul>
-                        <div class="grid__image">
-                            <img src="./images/png/tablet.png" alt="table grid">
-                        </div>
-                    </section>
-                    <section class="grid__division">
-                        <h3 class="grid__subtitle">Телефон (320+)</h3>
-                        <ul class="grid__table table">
-                            <li class="table__content-width table__item">Контент
-                                <p class="table__item__value">296–424</p>
-                            </li>
-                            <li class="table__columns table__item">Колонок
-                                <p class="table__item__value">4</p>
-                            </li>
-                            <li class="table__column-width table__item">Ширина колонки
-                                <p class="table__item__value">56-88</p>
-                            </li>
-                            <li class="table__column-gap table__item">Межколонник
-                                <p class="table__item__value">24</p>
-                            </li>
-                        </ul>
-                        <div class="grid__image">
-                            <img src="./images/png/mobile.png" alt="mobile grid">
-                        </div>
-                    </section>
-                </section>
-                <section class="section main__typography typography">
-                    <h2 class="subtitle">Типография</h2>
-                    <p class="section__text">Используется шрифт Graphik. На телефонах стили типографики переопределяются
-                    </p>
-                    <div class="typography__content">
-                        <ul class="typography__tabs">
-                            <li class="tab active-tab" id="desktop">Десктоп</li>
-                            <li class="tab" id="mobile">Телефон</li>
-                        </ul>
-                        <div class="desktop-tab typography__tab">
-                            <div class="text-style">
-                                <div class="text-desc">Заголовок H1, 48/56, bold</div>
-                                <h1 class="text-example h1">Текст заголовка</h1>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Заголовок H2, 32/40, bold</div>
-                                <h2 class="text-example h2">Текст заголовка</h2>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Заголовок H3, 24/32, medium</div>
-                                <h3 class="text-example h3">Текст заголовка</h3>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Заголовок H4, 18/28, medium</div>
-                                <h4 class="text-example h4">Текст заголовка</h4>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Лид P_Lead, 24/32, regular</div>
-                                <p1 class="text-example p-lead">Текст лида</p1>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Крупный текст P_18, 18/28, regular</div>
-                                <p2 class="text-example p-large">Крупный текст</p2>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Основной текст P_16, 16/24, regular</div>
-                                <p3 class="text-example p-primary">Основной текст</p3>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Впомогательный текст P_14, 14/20, regular</div>
-                                <p4 class="text-example p-additionally">Вспомогательный текст</p4>
-                            </div>
-                        </div>
-                        <div class="mobile-tab typography__tab">
-                            <div class="text-style">
-                                <div class="text-desc">Заголовок H1, 48/56, bold</div>
-                                <h1 class="text-example h1">Текст заголовка</h1>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Заголовок H2, 32/40, bold</div>
-                                <h2 class="text-example h2">Текст заголовка</h2>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Заголовок H3, 24/32, medium</div>
-                                <h3 class="text-example h3">Текст заголовка</h3>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Заголовок H4, 18/28, medium</div>
-                                <h4 class="text-example h4">Текст заголовка</h4>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Лид P_Lead, 24/32, regular</div>
-                                <p1 class="text-example p-lead">Текст лида</p1>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Крупный текст P_18, 18/28, regular</div>
-                                <p2 class="text-example p-large">Крупный текст</p2>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Основной текст P_16, 16/24, regular</div>
-                                <p3 class="text-example p-primary">Основной текст</p3>
-                            </div>
-                            <div class="text-style">
-                                <div class="text-desc">Впомогательный текст P_14, 14/20, regular</div>
-                                <p4 class="text-example p-additionally">Вспомогательный текст</p4>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section ui">
-                    <h2 class="subtitle">UI</h2>
-                    <section class="ui__division">
-                        <h3 class="ui__subtitle">Текстовое поле</h3>
-                        <div class="ui__inputs">
-                            <div class="ui__input-container">
-                                <input type="email" class="ui__input" id="custom-placeholder-input1" required>
-                                <label for="custom-placeholder-input1" class="custom-placeholder">E-mail</label>
-                                <span class="error-message">Текст ошибки</span>
-                            </div>
-                            <div class="ui__input-container hovered">
-                                <span class="ui__narrative">Ховер</span>
-                                <input type="email" class="ui__input" id="custom-placeholder-input2" disabled>
-                                <label for="custom-placeholder-input2" class="custom-placeholder">E-mail</label><span
-                                    class="error-message">Текст ошибки</span>
-                            </div>
-                            <div class="ui__input-container focused">
-                                <span class="ui__narrative">Ввод</span>
-                                <input type="email" class="ui__input " id="custom-placeholder-input3"
-                                    value="office@make.st" disabled>
-                                <label for="custom-placeholder-input3" class="custom-placeholder">E-mail</label>
-                                <span class="error-message">Текст ошибки</span>
-                            </div>
-                            <div class="ui__input-container error">
-                                <span class="ui__narrative">Ошибка</span>
-                                <input type="email" class="ui__input " id="custom-placeholder-input4"
-                                    value="officemake.st" disabled>
-                                <label for="custom-placeholder-input4" class="custom-placeholder">E-mail</label>
-                                <span class="error-message">Текст ошибки</span>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="ui__division selectors">
-                        <h3 class="ui__subtitle">Выпадающий список</h3>
-                        <span class="ui__division__description">Компонент состоит из текстового поля и выпадающей
-                            подсказки</span>
-                        <div class="ui__selects">
-                            <div class="ui__select">
-                                <div class="select-box">
-                                    <span class="selected-item"></span>
-                                    <span class="custom-placeholder">Выберите что-нибудь</span>
-                                    <i class="arrow"></i>
-                                </div>
-                                <ul class="ui__select__options options">
-                                    <li class="option">Первый стул</li>
-                                    <li class="option">Второй стул</li>
-                                    <li class="option">Выбранный пункт</li>
-                                    <li class="option">Теорема Эскобара</li>
-                                </ul>
-                            </div>
-                            <div class="ui__select">
-                                <div class="select-box hovered">
-                                    <span class="selected-item"></span>
-                                    <span class="custom-placeholder">Выберите что-нибудь</span>
-                                    <i class="arrow"></i>
-                                </div>
-                            </div>
-                            <div class="ui__select">
-                                <div class="select-box active used">
-                                    <span class="selected-item">Выбранный пункт</span>
-                                    <span class="custom-placeholder">Выберите что-нибудь</span>
-                                    <i class="arrow"></i>
-                                </div>
-                                <ul class="ui__select__options options active active-example">
-                                    <li class="option">Первый стул</li>
-                                    <li class="option">Второй стул</li>
-                                    <li class="option selected">Выбранный пункт</li>
-                                    <li class="option hovered">Теорема Эскобара</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="ui__division buttons">
-                        <h3 class="ui__subtitle">Кнопка</h3>
-                        <div class="ui__buttons">
-                            <div class="ui__button-container">
-                                <button class="ui__button">
-                                    <span class="ui__button__text">Отправить</span>
-                                </button>
-                            </div>
-                            <div class="ui__button-container">
-                                <button class="ui__button hovered">
-                                    <span class="ui__button__text">Отправить</span>
-                                </button>
-                            </div>
-                            <div class="ui__button-container">
-                                <button class="ui__button click">
-                                    <span class="ui__button__text">Отправить</span>
-                                </button>
-                            </div>
-                            <div class="ui__button-container">
-                                <span class="narrative">Неактивна</span>
-                                <button class="ui__button disabled" disabled>
-                                    <span class="ui__button__text">Отправить</span>
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="ui__division checkboxes">
-                        <h3 class="ui__subtitle">
-                            Чекбокс, радиобаттон
-                        </h3>
-                        <div class="ui__examples">
-                            <div class="checkboxes-examples">
-                                <div class="checkbox-container">
-                                    <input type="checkbox" id="checkbox-example" class="checkbox">
-                                    <label for="checkbox-example">Выбери меня</label>
-                                    <div class="checkbox-wrapper">
-                                        <div class="checkmark">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10"
-                                                viewBox="0 0 14 10" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M5.15789 7.14286L12.5263 0L14 1.42857L5.15789 10L0 5L1.47368 3.57143L5.15789 7.14286Z"
-                                                    fill="white" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="checkbox-container hovered">
-                                    <input type="checkbox" id="checkbox-example1" class="checkbox" disabled>
-                                    <label for="checkbox-example1">Выбери меня</label>
-                                    <div class="checkbox-wrapper">
-                                        <div class="checkmark">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10"
-                                                viewBox="0 0 14 10" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M5.15789 7.14286L12.5263 0L14 1.42857L5.15789 10L0 5L1.47368 3.57143L5.15789 7.14286Z"
-                                                    fill="white" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="checkbox-container checked">
-                                    <input type="checkbox" id="checkbox-example2" class="checkbox">
-                                    <label for="checkbox-example2">Выбери меня</label>
-                                    <div class="checkbox-wrapper">
-                                        <div class="checkmark">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10"
-                                                viewBox="0 0 14 10" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M5.15789 7.14286L12.5263 0L14 1.42857L5.15789 10L0 5L1.47368 3.57143L5.15789 7.14286Z"
-                                                    fill="white" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="radio-examples">
-                                <div class="radio-container">
-                                    <input type="radio" id="radio-example" class="radio">
-                                    <label for="radio-example">Пластмассовый мир победил</label>
-                                    <div class="radio-wrapper">
-                                        <div class="checkmark">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="radio-container hovered">
-                                    <input type="radio" id="radio-example1" class="radio" disabled>
-                                    <label for="radio-example1">Макет оказался сильней</label>
-                                    <div class="radio-wrapper">
-                                        <div class="checkmark">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="radio-container checked">
-                                    <input type="radio" id="radio-example2" class="radio" disabled>
-                                    <label for="radio-example2">Последний кораблик остыл</label>
-                                    <div class="radio-wrapper">
-                                        <div class="checkmark">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="ui__division">
-                        <h3 class="ui__subtitle">
-                            Аккордеон
-                        </h3>
-                        <div class="accordions">
-                            <div class="accordions__example accordion">
-                                <div class="accordion__header">
-                                    <span>Аккордеон</span>
-                                    <div class="arrow"></div>
-                                </div>
-                                <p class="accordion__text">
-                                    Гоpдость полными вагонами золотыми погонами <br>
-                                    С юга дyют молодые вет…<br>
-                                    Pазpывая в клочья облака не забыли шлют из далека<br>
-                                    С дома мама И не последняя любовь<br>
-                                    А по небy бегyт видишь чьи-то следы<br>
-                                    Это может быть ты это может быть я<br>
-                                    Это может наш дрyг<br>
-                                    Это может нам поют свои
-                                </p>
-                            </div>
-                            <div class="accordions__example accordion hovered">
-                                <div class="accordion__header">
-                                    <span>Аккордеон</span>
-                                    <div class="arrow"></div>
-                                </div>
-                                <p class="accordion__text">
-                                    Гоpдость полными вагонами золотыми погонами <br>
-                                    С юга дyют молодые вет…<br>
-                                    Pазpывая в клочья облака не забыли шлют из далека<br>
-                                    С дома мама И не последняя любовь<br>
-                                    А по небy бегyт видишь чьи-то следы<br>
-                                    Это может быть ты это может быть я<br>
-                                    Это может наш дрyг<br>
-                                    Это может нам поют свои
-                                </p>
-                            </div>
-                            <div class="accordions__example accordion active">
-                                <div class="accordion__header">
-                                    <span>Аккордеон</span>
-                                    <div class="arrow"></div>
-                                </div>
-                                <p class="accordion__text">
-                                    Гоpдость полными вагонами золотыми погонами <br>
-                                    С юга дyют молодые вет…<br>
-                                    Pазpывая в клочья облака не забыли шлют из далека<br>
-                                    С дома мама И не последняя любовь<br>
-                                    А по небy бегyт видишь чьи-то следы<br>
-                                    Это может быть ты это может быть я<br>
-                                    Это может наш дрyг<br>
-                                    Это может нам поют свои
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer container">
-        <span>Победа! 😜</span>
-    </footer>
-    <script src="./scripts/main.js"></script>
-</body>
-
+		<footer class="footer container">
+			<span>Победа! 😜</span>
+		</footer>
+		<script src="./scripts/main.js"></script>
+	</body>
 </html>
