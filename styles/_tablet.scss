@@ -1,0 +1,160 @@
+@media (max-width: 1200px) {
+	.container {
+		max-width: 928px;
+		grid-template-columns: $gridTablet;
+		column-gap: 32px;
+		padding: 0 16px;
+	}
+	.header {
+		.menu {
+			grid-column: 8/8;
+		}
+	}
+	.menu-layout {
+		grid-template-columns: $gridTablet;
+		.menu__content {
+			grid-column: span 5;
+			grid-template-columns: repeat(8, 1fr);
+			&__heading {
+				grid-column: span 8;
+				grid-template-columns: $gridTablet;
+				span {
+					grid-column: span 7;
+				}
+			}
+			&__main {
+				grid-column: 2/8;
+				grid-template-columns: repeat(8, 1fr);
+				.performer {
+					grid-column: span 8;
+				}
+				.desc {
+					grid-column: span 6;
+				}
+				.phone {
+					grid-column: span 8;
+				}
+			}
+			.socials {
+				grid-column: 2/8;
+			}
+		}
+	}
+	.main {
+		grid-column: 3/8;
+		grid-template-columns: $gridTablet;
+		&__heading {
+			grid-column: span 4;
+		}
+		&__content {
+			grid-column: span 8;
+			grid-template-columns: $gridTablet;
+			.section__text {
+				grid-column: span 6;
+			}
+			.subtitle {
+				grid-column: span 8;
+			}
+			.preface {
+				grid-column: span 6;
+			}
+		}
+		.section {
+			grid-column: span 8;
+			grid-template-columns: $gridTablet;
+			.grid__division {
+				grid-column: span 8;
+				grid-template-columns: $gridTablet;
+				.grid__subtitle {
+					grid-column: span 8;
+				}
+				.table {
+					grid-column: span 7;
+				}
+				.grid__image {
+					grid-column: span 8;
+				}
+			}
+		}
+		.typography {
+			&__content {
+				grid-column: span 8;
+				grid-template-columns: $gridTablet;
+			}
+			&__tabs {
+				grid-column: span 8;
+			}
+			.typography__tab {
+				grid-column: span 8;
+				grid-template-columns: $gridTablet;
+				.text-style {
+					grid-column: span 8;
+					grid-template-columns: $gridTablet;
+					.text-desc {
+						grid-column: 1/4;
+					}
+					.text-example {
+						grid-column: 5/8;
+					}
+				}
+			}
+		}
+		.ui {
+			&__division {
+				grid-column: span 8;
+				grid-template-columns: $gridTablet;
+				.ui__subtitle {
+					grid-column: span 8;
+				}
+				&__description {
+					grid-column: span 8;
+				}
+				.ui__inputs,
+				.ui__selects,
+				.ui__buttons {
+					grid-column: span 8;
+				}
+				.ui__selects {
+					.ui__select {
+						.select-box {
+							height: 38px;
+						}
+					}
+				}
+				.ui__buttons {
+					grid-template-columns: repeat(2, 1fr);
+				}
+				.ui__examples {
+					grid-column: span 8;
+					grid-template-columns: $gridTablet;
+					.checkboxes-examples {
+						grid-column: 1/4;
+					}
+					.radio-examples {
+						grid-column: 5/8;
+					}
+				}
+				.accordions {
+					grid-column: span 8;
+					grid-template-columns: $gridTablet;
+					.accordion {
+						grid-column: span 8;
+						grid-template-columns: $gridTablet;
+						&__header {
+							grid-column: span 8;
+						}
+						&__text {
+							grid-column: span 6;
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		padding-bottom: 48px;
+		span {
+			grid-column: span 8;
+		}
+	}
+}

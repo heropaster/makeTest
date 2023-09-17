@@ -189,25 +189,30 @@
 			</div>
 		</div>
 		<div class="container">
+			<div class="aside-btn">
+				<span class="aside-arrow"></span>
+			</div>
 			<aside class="aside-menu">
-				<a href="#" class="aside-menu__link active-link">Напутственное слово</a>
-				<a href="#" class="aside-menu__link hovered">Сетка</a>
-				<a href="#" class="aside-menu__link">Типография</a>
-				<a href="#" class="aside-menu__link">UI</a>
+				<a href="#tip" class="aside-menu__link active-link"
+					>Напутственное слово</a
+				>
+				<a href="#grid" class="aside-menu__link hovered">Сетка</a>
+				<a href="#typography" class="aside-menu__link">Типография</a>
+				<a href="#ui" class="aside-menu__link">UI</a>
 			</aside>
 			<div class="main">
 				<div class="main__heading">
 					<h1 class="title">Тестовое задание</h1>
 					<span class="level">Уровень: junior</span>
 				</div>
-				<div class="main__content">
+				<div class="main__content" id="tip">
 					<p class="preface">
 						Привет! Твоё тестовое задание — грамотно заверстать эту прекрасную
 						страничку. В шапке страницы укажи своё ФИО, так всем будет удобнее.
 						В менюхе под иконкой бургером мы хотели бы также видеть твои данные.
 						Ну что, поехали?
 					</p>
-					<section class="main__grid grid section">
+					<section class="main__grid grid section" id="grid">
 						<h2 class="subtitle">Сетка</h2>
 						<p class="section__text">
 							Задание предполагает адаптивную вёрстку. Используется 3 состояния
@@ -288,7 +293,7 @@
 						</section>
 					</section>
 					<section class="section main__typography typography">
-						<h2 class="subtitle">Типография</h2>
+						<h2 class="subtitle" id="typography">Типография</h2>
 						<p class="section__text">
 							Используется шрифт Graphik. На телефонах стили типографики
 							переопределяются
@@ -384,7 +389,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="section ui">
+					<section class="section ui" id="ui">
 						<h2 class="subtitle">UI</h2>
 						<section class="ui__division">
 							<h3 class="ui__subtitle">Текстовое поле</h3>

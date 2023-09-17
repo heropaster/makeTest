@@ -4,6 +4,9 @@ function initScripts() {
 	initSelects();
 	initAccordions();
 	initMenu();
+	initTabs();
+	smoothAnchors();
+	initAside();
 }
 // Текстовые поля
 function initInputs() {
@@ -99,4 +102,57 @@ function hideScroll() {
 	} else {
 		document.body.style.overflow = "hidden";
 	}
+}
+// Tabs
+function initTabs() {
+	let tabs = document.querySelectorAll(".tab");
+	tabs.forEach((tab) => {
+		tab.addEventListener("click", () => {
+			// Удаление класса "active-tab" у всех вкладок
+			tabs.forEach((t) => t.classList.remove("active-tab"));
+			tab.classList.add("active-tab");
+
+			// Получение id выбранной вкладки (desktop или mobile)
+			const selectedTabId = tab.id;
+
+			const desktopTab = document.querySelector(".desktop-tab");
+			const mobileTab = document.querySelector(".mobile-tab");
+			if (selectedTabId === "desktop") {
+				// Показать содержимое для десктопа
+				desktopTab.style.display = "grid";
+				mobileTab.style.display = "none";
+			} else if (selectedTabId === "mobile") {
+				// Показать содержимое для мобильного устройства
+				mobileTab.style.display = "grid";
+				desktopTab.style.display = "none";
+			}
+		});
+	});
+}
+
+function smoothAnchors() {
+	const anchorLinks = document.querySelectorAll(".aside-menu__link");
+	anchorLinks.forEach((link) => {
+		link.addEventListener("click", (e) => {
+			e.preventDefault();
+			anchorLinks.forEach((item) => {
+				item.classList.remove("active-link");
+			});
+			link.classList.add("active-link");
+			const targetId = link.getAttribute("href").substring(1);
+			const targetSection = document.getElementById(targetId);
+			targetSection.scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+			});
+		});
+	});
+}
+function initAside() {
+	const btn = document.querySelector(".aside-btn");
+	const asideBlock = document.querySelector(".aside-menu");
+	btn.addEventListener("click", () => {
+		btn.classList.toggle("active");
+		asideBlock.classList.toggle("opened");
+	});
 }

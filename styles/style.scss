@@ -17,6 +17,7 @@ a {
 body {
 	font-family: "Graphik", sans-serif;
 	color: $mainColor;
+	overflow-x: hidden;
 }
 img {
 	width: 100%;
@@ -43,6 +44,7 @@ img {
 			}
 			&__middlename {
 				color: $grayColor;
+				width: max-content;
 			}
 		}
 	}
@@ -94,7 +96,7 @@ img {
 	top: 0;
 	left: 0;
 	z-index: 10;
-	transform: translateX(-100%);
+	transform: translateY(-130%);
 	background: url("../images/png/menuBg.png") no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -103,12 +105,12 @@ img {
 	grid-template-columns: repeat(12, 1fr);
 	padding: 8px;
 	&.active {
-		transform: translateX(0);
+		transform: translateY(0);
 	}
 	.menu__content {
 		grid-column: span 7;
 		display: grid;
-		grid-template-columns: $grid;
+		grid-template-columns: repeat(12, 1fr);
 		grid-auto-rows: minmax(0, max-content);
 		column-gap: 32px;
 		background: #fff;
@@ -134,7 +136,8 @@ img {
 			margin-top: 64px;
 			grid-column: 2/12;
 			display: grid;
-			grid-template-columns: $grid;
+			grid-template-columns: repeat(12, 1fr);
+			column-gap: 32px;
 			color: $mainColor;
 			.performer {
 				font-size: 32px;
@@ -188,7 +191,49 @@ img {
 		}
 	}
 }
+.aside-btn {
+	margin-top: 150px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background-color: #e9e9e96e;
+	position: fixed;
+	grid-column: span 2;
+	width: 78px;
+	height: 58px;
+	border-radius: 50%;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+	.aside-arrow {
+		width: 50px;
+		height: 30px;
+		display: grid;
+		overflow: hidden;
+		&::before {
+			content: "";
+			grid-area: 1/1;
+			background: $blue;
+			clip-path: polygon(
+				0 10px,
+				calc(100% - 15px) 10px,
+				calc(100% - 15px) 0,
+				100% 50%,
+				calc(100% - 15px) 100%,
+				calc(100% - 15px) calc(100% - 10px),
+				0 calc(100% - 10px)
+			);
+			transition: transform 0.5s ease;
+		}
+	}
+	&.active {
+		.aside-arrow {
+			&::before {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
 .aside-menu {
+	position: fixed;
 	margin-top: 216px;
 	grid-column: span 2;
 	display: flex;
@@ -1036,10 +1081,12 @@ img {
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
 	.container {
 		max-width: 1312px;
-		grid-template-columns: repeat(12, 1fr);
+		grid-template-columns: $grid;
 		column-gap: 32px;
 	}
 }
+@import "tablet";
+@import "mobile";
